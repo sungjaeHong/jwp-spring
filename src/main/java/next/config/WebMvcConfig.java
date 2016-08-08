@@ -18,7 +18,7 @@ import core.web.argumentresolver.LoginUserHandlerMethodArgumentResolver;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = { "next.controller" })
+@ComponentScan(basePackages = { "next" })
 public class WebMvcConfig extends WebMvcConfigurerAdapter {
     private static final int CACHE_PERIOD = 31556926; // one year
     
