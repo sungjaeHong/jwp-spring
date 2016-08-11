@@ -29,9 +29,9 @@ import core.web.argumentresolver.LoginUser;
 public class ApiQuestionController {
 	private Logger log = LoggerFactory.getLogger(ApiQuestionController.class);
 	
-	private QuestionDao questionDao = QuestionDao.getInstance();
-	private AnswerDao answerDao = AnswerDao.getInstance();
-	private QnaService qnaService = QnaService.getInstance();
+	private QuestionDao questionDao;
+	private AnswerDao answerDao;
+	private QnaService qnaService;
 	
 	@RequestMapping(value="/{questionId}", method=RequestMethod.DELETE)
 	public Result deleteQuestion(@LoginUser User loginUser, @PathVariable long questionId) throws Exception {

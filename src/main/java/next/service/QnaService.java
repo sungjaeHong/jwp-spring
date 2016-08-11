@@ -14,18 +14,9 @@ import next.model.User;
 public class QnaService {
 	private static QnaService qnaService;
 
-	private QuestionDao questionDao = QuestionDao.getInstance();
-	private AnswerDao answerDao = AnswerDao.getInstance();
+	private QuestionDao questionDao;
+	private AnswerDao answerDao;
 
-	private QnaService() {
-	}
-
-	public static QnaService getInstance() {
-		if (qnaService == null) {
-			qnaService = new QnaService();
-		}
-		return qnaService;
-	}
 
 	public Question findById(long questionId) {
 		return questionDao.findById(questionId);

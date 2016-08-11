@@ -17,8 +17,8 @@ import core.web.argumentresolver.LoginUser;
 @Controller
 @RequestMapping("/questions")
 public class QuestionController {
-	private QuestionDao questionDao = QuestionDao.getInstance();
-	private QnaService qnaService = QnaService.getInstance();
+	private QuestionDao questionDao;
+	private QnaService qnaService;
 
 	@RequestMapping(value = "/{questionId}", method = RequestMethod.GET)
 	public String show(@PathVariable long questionId, Model model) throws Exception {
